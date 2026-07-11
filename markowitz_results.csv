@@ -1,0 +1,4 @@
+portfolio_type,ann_return_pct,ann_volatility_pct,sharpe_ratio,weight_SBI_Bluechip_Regular,weight_HDFC_Mid-Cap_Opportunities,weight_SBI_Small_Cap_Regular,weight_Kotak_Flexicap_Regular,weight_Mirae_Asset_Tax_Saver
+Max Sharpe,19.1202,6.4607,1.9534,25.638479111132146,16.298837059696623,10.978768055017813,25.950953056660715,21.1329627174927
+Min Variance,18.8887,6.4012,1.9354,31.43710261691189,15.66666157113867,8.891980068977768,24.782357273548396,19.22189846942327
+Equal Weight,19.4717,7.0164,1.8488,20.0,20.0,20.0,20.0,20.0
