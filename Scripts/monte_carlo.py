@@ -27,8 +27,13 @@ warnings.filterwarnings('ignore')
 # ─────────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────────
-PROC            = "data/processed"
-REP             = "reports"
+# PROC            = "data/processed"
+# REP             = "reports"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+PROC     = BASE_DIR / "data" / "processed"
+REP      = BASE_DIR / "reports"
 SIMULATIONS     = 1000          # number of Monte Carlo paths
 HORIZON_YEARS   = 5             # projection horizon
 TRADING_DAYS    = 252           # trading days per year

@@ -12,8 +12,12 @@ Run:
 import pandas as pd
 import os
 
-PROC = 'data/processed'
+# PROC = 'data/processed'
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+PROC     = BASE_DIR / "data" / "processed"
 def load_data():
     fm   = pd.read_csv(f'{PROC}/01_fund_master.csv')
     perf = pd.read_csv(f'{PROC}/07_scheme_performance.csv')

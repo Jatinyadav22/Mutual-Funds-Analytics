@@ -11,9 +11,15 @@ Run:
 import os
 import pandas as pd
 
-RAW_DIR       = "data/raw"
-PROCESSED_DIR = "data/processed"
-REPORT_PATH   = "reports/cleaning_report_day2.txt"
+# RAW_DIR       = "data/raw"
+# PROCESSED_DIR = "data/processed"
+# REPORT_PATH   = "reports/cleaning_report_day2.txt"
+from pathlib import Path
+
+BASE_DIR      = Path(__file__).parent
+RAW_DIR       = BASE_DIR / "data" / "raw"
+PROCESSED_DIR = BASE_DIR / "data" / "processed"
+REPORT_PATH   = BASE_DIR / "reports" / "cleaning_report_day2.txt"
 
 os.makedirs(PROCESSED_DIR, exist_ok=True)
 os.makedirs("reports", exist_ok=True)

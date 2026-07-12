@@ -43,10 +43,15 @@ from sqlalchemy import create_engine, text
 # CONFIG — edit these if needed
 # ─────────────────────────────────────────────────────────────
 BASE_URL   = "https://api.mfapi.in/mf"
-DB_PATH    = "bluestock_mf.db"
-RAW_DIR    = Path("data/raw")
-LOG_DIR    = Path("logs")
-LOG_FILE   = LOG_DIR / "etl_scheduler.log"
+# DB_PATH    = "bluestock_mf.db"
+# RAW_DIR    = Path("data/raw")
+# LOG_DIR    = Path("logs")
+# LOG_FILE   = LOG_DIR / "etl_scheduler.log"
+BASE_DIR = Path(__file__).parent
+DB_PATH  = BASE_DIR / "bluestock_mf.db"
+RAW_DIR  = BASE_DIR / "data" / "raw"
+LOG_DIR  = BASE_DIR / "logs"
+LOG_FILE = LOG_DIR / "etl_scheduler.log"
 RUN_TIME   = "20:00"        # 8:00 PM
 DELAY_SEC  = 0.6            # polite delay between API calls
 TASK_NAME  = "BluestockETLScheduler"

@@ -11,9 +11,15 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine, text
 
-PROCESSED_DIR = "data/processed"
-DB_PATH       = "bluestock_mf.db"
-SCHEMA_PATH   = "sql/schema.sql"
+# PROCESSED_DIR = "data/processed"
+# DB_PATH       = "bluestock_mf.db"
+# SCHEMA_PATH   = "sql/schema.sql"
+from pathlib import Path
+
+BASE_DIR      = Path(__file__).parent
+PROCESSED_DIR = BASE_DIR / "data" / "processed"
+DB_PATH       = BASE_DIR / "bluestock_mf.db"
+SCHEMA_PATH   = BASE_DIR / "sql" / "schema.sql"
 
 engine = create_engine(f"sqlite:///{DB_PATH}", echo=False)
 

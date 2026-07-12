@@ -38,8 +38,13 @@ warnings.filterwarnings('ignore')
 # ─────────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────────
-PROC         = "data/processed"
-REP          = "reports"
+# PROC         = "data/processed"
+# REP          = "reports"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+PROC     = BASE_DIR / "data" / "processed"
+REP      = BASE_DIR / "reports"
 N_PORTFOLIOS = 10000       # random portfolios to simulate
 TRADING_DAYS = 252
 RF_RATE      = 0.065       # risk-free rate 6.5% (RBI repo proxy)

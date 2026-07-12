@@ -23,7 +23,11 @@ import pandas as pd
 from datetime import datetime
 
 BASE_URL  = "https://api.mfapi.in/mf"
-RAW_DIR   = "data/raw"
+# RAW_DIR   = "data/raw"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+RAW_DIR  = BASE_DIR / "data" / "raw"
 DELAY_SEC = 0.6
 
 SCHEMES = {

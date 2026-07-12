@@ -7,9 +7,15 @@ and validate AMFI codes against nav_history."""
 import os
 import pandas as pd
 
-RAW_DIR       = "data/raw"
-PROCESSED_DIR = "data/processed"
-REPORT_PATH   = "reports/data_quality_day1.txt"
+# RAW_DIR       = "data/raw"
+# PROCESSED_DIR = "data/processed"
+# REPORT_PATH   = "reports/data_quality_day1.txt"
+from pathlib import Path
+
+BASE_DIR      = Path(__file__).parent
+RAW_DIR       = BASE_DIR / "data" / "raw"
+PROCESSED_DIR = BASE_DIR / "data" / "processed"
+REPORT_PATH   = BASE_DIR / "reports" / "data_quality_day1.txt"
 
 CSV_FILES = {
     "fund_master":           "01_fund_master.csv",
